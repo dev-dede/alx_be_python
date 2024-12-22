@@ -10,11 +10,8 @@ match priority:
     case "high":
         level = "high"
 if time_bound == "yes":
-    beginning_message = "Reminder"
-    ending_message = " that requires immediate attention today!"
+    print()
+    print(f"Reminder: '{task}' is a {level} priority task that requires immediate attention today!")
 else:
-    beginning_message = "Note"
-    ending_message = ". Consider completing it when you have free time."
-
-print()
-print(f"{beginning_message}: '{task}' is a {level} priority task{ending_message}")
+    print()
+    print(f"Note: '{task}' is a {level} priority task. Consider completing it when you have free time.")
