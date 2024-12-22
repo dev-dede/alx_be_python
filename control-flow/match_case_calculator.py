@@ -12,13 +12,12 @@ match operation:
         result = num1 * num2
     case "/":
         if num2 == 0:
-            result = "Cannot divide by zero."
+            print("Cannot divide by zero.")
+            exit()
         else:
             result = num1 / num2
     case _:
-        result = "Invalid operation"
+        print("Invalid operation")
+        exit()
 
-if  result == "Cannot divide by zero." or  result == "Invalid operation":
-    print(result)
-else:
-    print(f"The result is {result}.")
+print(f"The result is {result}.")
