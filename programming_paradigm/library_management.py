@@ -8,7 +8,7 @@ class Book:
             self._is_checked_out = True
         else:
             print("Book is already checked out")
-    def return_book(sefl):
+    def return_book(self):
         self._is_checked_out = False
 class Library:
     def __init__(self):
