@@ -3,6 +3,13 @@ class Book:
         self.author = author
         self.title = title
         self._is_checked_out = False
+    def check_out_book(self):
+        if not self._is_checked_out:
+            self._is_checked_out = True
+        else:
+            print("Book is already checked out")
+    def return_book(sefl):
+        self._is_checked_out = False
 class Library:
     def __init__(self):
         self._books = []
@@ -14,17 +21,13 @@ class Library:
     def check_out_book(self, title):
         for book in self._books:
             if book.title == title:
-                if not book._is_checked_out:
-                    book._is_checked_out = True
-                    return
-                else:
-                    print("Book is already checked out")
-                    return
+                book.check_out_book()
+                return
         print(f"There is no book with the title {title}")
     def return_book(self, title):
         for book in self._books:
             if book.title == title:
-                book._is_checked_out = False
+                book.check_out_book()
                 return
         print("We don't have this book in our collection")
     def list_available_books(self):
