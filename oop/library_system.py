@@ -24,11 +24,6 @@ class Library:
             self.books.append(book)
         else:
             print("Only instances of Book, EBook or PrintBook can be added to the library")
-    def __str__(self):
-        book_list = []
-        for book in self.books:
-           print(book)
-        return "/n".join(book_list)
     def list_books(self):
         for book in self.books:
            print(book)
