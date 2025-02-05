@@ -12,14 +12,14 @@ def main():
         choice = input("Enter your choice: ")
 
         if choice == "1":
-            item = input("Enter an item to add to list: ")
+            item = input("Enter the item to add: ")
             shopping_list.append(item)
         elif choice == "2":
-            item = input("Enter item to be removed from list: ")
+            item = input("Enter the item to remove: ")
             if item in shopping_list:
                 shopping_list.remove(item)
             else:
-                print(f"{item} is not found in shopping list")
+                print(f"{item} not found in shopping list")
         elif choice == "3":
             if shopping_list:
                 for item in shopping_list:
