@@ -1,12 +1,11 @@
 def perform_operation(num1, num2, operation):
-    match operation:
-        case "add":
+        if operation == "add":
             return num1 + num2
-        case "subtract":
+        if operation == "subtract":
             return num1 - num2
-        case "multiply":
+        if operation == "multiply":
             return num1 * num2
-        case "divide":
+        if operation == "divide":
             return num1 / num2 if num2 != 0 else "Cannot divide by zero"
-        case _:
+        if operation == _:
             return "Invalid operation"
